@@ -17,6 +17,7 @@ MODULE: RE_MODULE
     WINAPI: InfiniteMatchTimeout re.dll
 
 EXPORT
+
     WARNING @ WARNING OFF
 
     Options.Compiled                 CONSTANT Options.Compiled
@@ -216,5 +217,173 @@ EXPORT
     WINAPI: Split.toArrT re.dll
     WINAPI: Split.toArrA re.dll
     WINAPI: Split.Free re.dll
+
+    \ ----------------------------------------------------------------------------------------------------
+    \ Regex Options
+    0 VALUE reCompilationOptions
+
+    : ReDefOptions
+        Options.Compiled TO reCompilationOptions
+    ;
+
+    : ReAddOption   \ ( RegexOption -- )
+        reCompilationOptions OR TO reCompilationOptions
+    ;
+
+    : ReCompiled   \ ( -- )
+        Options.Compiled ReAddOption
+    ; IMMEDIATE
+
+    : ReCultureInvariant   \ ( -- )
+        Options.CultureInvariant ReAddOption
+    ; IMMEDIATE
+
+    : ReECMAScript   \ ( -- )
+        Options.ECMAScript ReAddOption
+    ; IMMEDIATE
+
+    : ReExplicitCapture   \ ( -- )
+        Options.ExplicitCapture ReAddOption
+    ; IMMEDIATE
+
+    : ReIgnoreCase   \ ( -- )
+        Options.IgnoreCase ReAddOption
+    ; IMMEDIATE
+
+    : ReIgnorePatternWhitespace   \ ( -- )
+        Options.IgnorePatternWhitespace ReAddOption
+    ; IMMEDIATE
+
+    : ReMultiline   \ ( -- )
+        Options.Multiline ReAddOption
+    ; IMMEDIATE
+
+    : ReNone   \ ( -- )
+        Options.None TO reCompilationOptions
+    ; IMMEDIATE
+
+    : ReRightToLeft   \ ( -- )
+        Options.RightToLeft ReAddOption
+    ; IMMEDIATE
+
+    : ReSingleline   \ ( -- )
+        Options.Singleline ReAddOption
+    ; IMMEDIATE
+
+    \ Additional Options
+
+    : ReMaxTime
+
+    ;
+
+    : ReStartPos
+
+    ;
+
+    : ReEndPos
+
+    ;
+
+    : ReCount
+
+    ;
+
+    \ ----------------------------------------------------------------------------------------------------
+    \ Regex creation
+
+    : SREGEX   \ ( a u -- regex )
+
+    ;
+
+    : UREGEX   \ ( a_utf u -- regex )
+
+    ;
+
+    : REGEX   \ ( regex -- ) ( "name" -> ) /pattern/ REGEX patternNameValue
+        VALUE
+    ;
+
+    \ ----------------------------------------------------------------------------------------------------
+    \ IsMatch
+
+    : ReIsMatch   \ ( a u regex -- ? )
+
+    ;
+
+    \ ----------------------------------------------------------------------------------------------------
+    \ Match
+
+    : ReMatch   \ ( a u regex -- match )
+
+    ;
+
+    : MatchValue   \ ( match -- a u )
+
+    ;
+
+    : MatchNext   \ ( match1 -- match2 )
+
+    ;
+
+    \ ----------------------------------------------------------------------------------------------------
+    \ Matches
+
+    : ReMatches   \ ( a u regex -- Matches )
+
+    ;
+
+    : ForMatches(   \ ( Matches -- )
+
+    ;
+
+    : )ForMatches
+
+    ;
+
+    : ForGroups(   \ ( Groups -- )
+
+    ;
+
+    : )ForGroups
+
+    ;
+
+    : ForCaptures(   \ ( Captures -- )
+
+    ;
+
+    : )ForCaptures
+
+    ;
+
+    \ ----------------------------------------------------------------------------------------------------
+    \ Replace
+
+    : ReReplace   \ ( a1 u1 a2 u2 regex -- a u )
+
+    ;
+
+    : ReReplace(   \ ( a1 u1 a2 u2 regex -- )
+
+    ;
+
+    : )ReReplace
+
+    ;
+
+    \ ----------------------------------------------------------------------------------------------------
+    \ Split
+
+    : ReSplit   \ ( a1 u1 regex -- ????? )
+
+    ;
+
+    : ReSplit(   \ ( a1 u1 regex -- )
+
+    ;
+
+    : )ReSplit
+
+    ;
 
 ;MODULE
