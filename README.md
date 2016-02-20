@@ -13,8 +13,8 @@ dotnet regex plugin for nnCron
 
 ### dll
 
-[Debug](re/doc/Debug.md)
-[Release](re/doc/Debug.md)
+* [Debug](re/doc/Debug.md)
+* [Release](re/doc/Debug.md)
 
 ### Regex class
 
@@ -38,11 +38,11 @@ Doc xml2md generator:  https://gist.github.com/VoidVolker/d195b9746fcc6907a551
 
 ### dll
 
-[Debug](re/doc/Debug.md)
-[Release](re/doc/Debug.md)
+* [Debug](re/doc/Debug.md)
+* [Release](re/doc/Debug.md)
 
 Документация генерируется из xml комментариев вот этой программой: https://gist.github.com/VoidVolker/d195b9746fcc6907a551
-Поэтому вносить правки следует в комментарии в файлах исходного кода.
+Поэтому вносить правки следует в комментарии в файлах исходного кода. Фактически большей частью - копипаст msdn.
 
 ### Регулярные выражения
 
