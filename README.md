@@ -9,8 +9,46 @@ dotnet regex plugin for nnCron
 * Copy `re.spf` to `nnCron\plugins`
 * Add `re.spf` into plugins list in nnCron.ini or via GUI
 
+## Manual
+
+### dll
+
+[Debug](re/doc/Debug.md)
+[Release](re/doc/Debug.md)
+
+### Regex class
+
+https://msdn.microsoft.com/en-us/library/system.text.regularexpressions.regex(v=vs.110).aspx
+
+Doc xml2md generator:  https://gist.github.com/VoidVolker/d195b9746fcc6907a551
+
+### Plugin
+
+<In develop>
+
+---
+
 ## Установка
 
 * Копировать `re\re\bin\Release\re.dll` в домашний каталог nnCron
 * Копировать `re.spf` в каталог `nnCron\plugins`
 * Добавить `re.spf` в список плагинов в `nnCron.ini` или через GUI
+
+## Докуменатция 
+
+### dll
+
+[Debug](re/doc/Debug.md)
+[Release](re/doc/Debug.md)
+
+Документация генерируется из xml комментариев вот этой программой: https://gist.github.com/VoidVolker/d195b9746fcc6907a551
+Поэтому вносить правки следует в комментарии в файлах исходного кода.
+
+### Регулярные выражения
+
+https://msdn.microsoft.com/ru-ru/library/system.text.regularexpressions.regex(v=vs.110).aspx
+
+### Плагин
+
+<В разработке>
+
