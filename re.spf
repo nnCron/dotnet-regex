@@ -292,16 +292,81 @@ EXPORT
     \ Regex creation
 
     : SREGEX   \ ( a u -- regex )
-
+        2DROP
+        ReDefOptions
     ;
 
     : UREGEX   \ ( a_utf u -- regex )
-
+        ." UREGEX: " TYPE CR
+        \ 2DROP
+        ReDefOptions
     ;
 
-    : REGEX   \ ( regex -- ) ( "name" -> ) /pattern/ REGEX patternNameValue
-        VALUE
+    \ : REGEX   \ ( regex -- ) ( "name" -> ) /pattern/ REGEX patternNameValue
+    \     VALUE
+    \ ;
+
+
+    \ --------------------------------------------------
+    \ Regex builder
+    \ i = IgnoreCase
+    \ m = Multiline
+    \ n = ExplicitCapture
+    \ s = Singleline
+    \ x = IgnorePatternWhitespace
+    \ r = RightToLeft
+    \ e = ECMAScript
+    \ c = CultureInvariant
+    \ /pattern/imnsxrec
+    \ /pattern/
+    \ S" /pattern/imnsxre" IsRegex?
+    \ S" /pattern/"
+
+    : IsRegex?   \ ( a u -- au_regex au_options true | false  )
+        DUP 3 <             IF 2DROP FALSE EXIT THEN
+        OVER C@ [CHAR] / <> IF 2DROP FALSE EXIT THEN    \ a u
+        1 -1 D+
+        S" /" StringSplitBack IF  \ a1 u2 a2 u2
+            TRUE
+        ELSE 2DROP 2DROP THEN
     ;
+
+    : ParseOptions   \ ( a u -- options )
+        DUP IFNOT NIP EXIT THEN
+        0 -ROT
+        OVER + SWAP DO
+            I C@ CASE
+                [CHAR] i OF Options.IgnoreCase OR ENDOF
+                [CHAR] m OF Options.Multiline OR ENDOF
+                [CHAR] n OF Options.ExplicitCapture OR ENDOF
+                [CHAR] s OF Options.Singleline OR ENDOF
+                [CHAR] x OF Options.IgnorePatternWhitespace OR ENDOF
+                [CHAR] r OF Options.RightToLeft OR ENDOF
+                [CHAR] e OF Options.ECMAScript OR ENDOF
+                [CHAR] c OF Options.CultureInvariant OR ENDOF
+                DUP OF ABORT" Unknow regex option" ENDOF
+            ENDCASE
+        LOOP
+    ;
+
+    : BuildRegex   \ ( a1 u2 a2 u2 -- regex )
+        ParseOptions
+        reCompilationOptions OR TO reCompilationOptions
+        UREGEX
+    ;
+
+    WARNING @ WARNING OFF
+
+    : NOTFOUND ( a u -- )
+      2DUP 2>R ['] NOTFOUND CATCH
+      IF
+        2DROP
+        2R@ IsRegex? IF BuildRegex ELSE -2003 THROW THEN
+      THEN
+      RDROP RDROP
+    ;
+
+    WARNING !
 
     \ ----------------------------------------------------------------------------------------------------
     \ IsMatch
