@@ -37,7 +37,7 @@ namespace re
         [DllExport("Options.ECMAScript")]
         public static RegexOptions opECMAScriptt() { return RegexOptions.ECMAScript; }
         /// <summary>
-        /// Specifies that the only valid captures are explicitly named or numbered groups of the form (?<name>…). This allows unnamed parentheses to act as noncapturing groups without the syntactic clumsiness of the expression (?:…).
+        /// Specifies that the only valid captures are explicitly named or numbered groups of the form (?&lt;name&gt;…). This allows unnamed parentheses to act as noncapturing groups without the syntactic clumsiness of the expression (?:…).
         /// </summary>
         /// <returns>ExplicitCapture</returns>
         [DllExport("Options.ExplicitCapture")]

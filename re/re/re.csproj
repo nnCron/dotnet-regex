@@ -68,7 +68,7 @@
     </PreBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <PostBuildEvent>"C:\Users\Admin\Documents\Visual Studio 2013\Projects\xml2md\xml2md\bin\Debug\xml2md.exe" "$(TargetDir)re.XML" &gt;re.md</PostBuildEvent>
+    <PostBuildEvent>"C:\Users\Admin\Documents\Visual Studio 2013\Projects\xml2md\xml2md\bin\Debug\xml2md.exe" "$(TargetDir)re.XML" &gt;../../../doc/$(ConfigurationName).md</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

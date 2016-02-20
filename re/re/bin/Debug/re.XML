@@ -1,0 +1,1701 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>re</name>
+    </assembly>
+    <members>
+        <member name="T:re.re">
+            <summary>
+            Provide list of constants
+            </summary>
+        </member>
+        <member name="F:re.re.CELL">
+            <summary>
+            Cell size
+            </summary>
+        </member>
+        <member name="M:re.re.optCompiled">
+            <summary>
+            Specifies that the regular expression is compiled to an assembly. This yields faster execution but increases startup time. This value should not be assigned to the Options property when calling the CompileToAssembly method.
+            </summary>
+            <returns>Compiled</returns>
+        </member>
+        <member name="M:re.re.optCultureInvariant">
+            <summary>
+            Specifies that cultural differences in language is ignored.
+            </summary>
+            <returns>CultureInvariant</returns>
+        </member>
+        <member name="M:re.re.opECMAScriptt">
+            <summary>
+            Enables ECMAScript-compliant behavior for the expression. This value can be used only in conjunction with the IgnoreCase, Multiline, and Compiled values. The use of this value with any other values results in an exception.
+            </summary>
+            <returns>ECMAScript</returns>
+        </member>
+        <member name="M:re.re.optExplicitCapture">
+            <summary>
+            Specifies that the only valid captures are explicitly named or numbered groups of the form (?&lt;name&gt;…). This allows unnamed parentheses to act as noncapturing groups without the syntactic clumsiness of the expression (?:…).
+            </summary>
+            <returns>ExplicitCapture</returns>
+        </member>
+        <member name="M:re.re.optIgnoreCase">
+            <summary>
+            Specifies case-insensitive matching. 
+            </summary>
+            <returns>IgnoreCase</returns>
+        </member>
+        <member name="M:re.re.optIgnorePatternWhitespace">
+            <summary>
+            Eliminates unescaped white space from the pattern and enables comments marked with #. However, this value does not affect or eliminate white space in, numeric, or tokens that mark the beginning of individual. 
+            </summary>
+            <returns>IgnorePatternWhitespace</returns>
+        </member>
+        <member name="M:re.re.optMultiline">
+            <summary>
+            Multiline mode. Changes the meaning of ^ and $ so they match at the beginning and end, respectively, of any line, and not just the beginning and end of the entire string.
+            </summary>
+            <returns>Multiline</returns>
+        </member>
+        <member name="M:re.re.optNone">
+            <summary>
+            Specifies that no options are set.
+            </summary>
+            <returns>None</returns>
+        </member>
+        <member name="M:re.re.optRightToLeft">
+            <summary>
+            Specifies that the search will be from right to left instead of from left to right.
+            </summary>
+            <returns>RightToLeft</returns>
+        </member>
+        <member name="M:re.re.optSingleline">
+            <summary>
+            Specifies single-line mode. Changes the meaning of the dot (.) so it matches every character (instead of every character except \n).
+            </summary>
+            <returns>Singleline</returns>
+        </member>
+        <member name="M:re.re.RegexInfiniteMatchTimeout">
+            <summary>
+            Specifies that a pattern-matching operation should not time out.
+            </summary>
+            <returns>InfiniteMatchTimeout</returns>
+        </member>
+        <member name="M:re.re.RegexMatches(re.re.wrap@,System.Text.RegularExpressions.Regex,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="matchesOut"></param>
+            <param name="re"></param>
+            <param name="input"></param>
+        </member>
+        <member name="M:re.re.RegexMatchesT(re.re.wrap@,System.Text.RegularExpressions.Regex,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="matchesOut"></param>
+            <param name="re"></param>
+            <param name="input"></param>
+        </member>
+        <member name="M:re.re.RegexMatchesA(re.re.wrap@,System.Text.RegularExpressions.Regex,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="matchesOut"></param>
+            <param name="re"></param>
+            <param name="input"></param>
+        </member>
+        <member name="M:re.re.RegexMatches_startat(re.re.wrap@,System.Text.RegularExpressions.Regex,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="matchesOut"></param>
+            <param name="re"></param>
+            <param name="input"></param>
+            <param name="startat"></param>
+        </member>
+        <member name="M:re.re.RegexMatches_startatT(re.re.wrap@,System.Text.RegularExpressions.Regex,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="matchesOut"></param>
+            <param name="re"></param>
+            <param name="input"></param>
+            <param name="startat"></param>
+        </member>
+        <member name="M:re.re.RegexMatches_startatA(re.re.wrap@,System.Text.RegularExpressions.Regex,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="matchesOut"></param>
+            <param name="re"></param>
+            <param name="input"></param>
+            <param name="startat"></param>
+        </member>
+        <member name="M:re.re.reMatches(re.re.wrap@,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="matchesOut"></param>
+            <param name="input"></param>
+            <param name="pattern"></param>
+        </member>
+        <member name="M:re.re.reMatchesT(re.re.wrap@,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="matchesOut"></param>
+            <param name="input"></param>
+            <param name="pattern"></param>
+        </member>
+        <member name="M:re.re.reMatchesA(re.re.wrap@,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="matchesOut"></param>
+            <param name="input"></param>
+            <param name="pattern"></param>
+        </member>
+        <member name="M:re.re.reMatches_opt(re.re.wrap@,System.String,System.String,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            
+            </summary>
+            <param name="matchesOut"></param>
+            <param name="input"></param>
+            <param name="pattern"></param>
+            <param name="options"></param>
+        </member>
+        <member name="M:re.re.reMatches_optT(re.re.wrap@,System.String,System.String,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            
+            </summary>
+            <param name="matchesOut"></param>
+            <param name="input"></param>
+            <param name="pattern"></param>
+            <param name="options"></param>
+        </member>
+        <member name="M:re.re.reMatches_optA(re.re.wrap@,System.String,System.String,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            
+            </summary>
+            <param name="matchesOut"></param>
+            <param name="input"></param>
+            <param name="pattern"></param>
+            <param name="options"></param>
+        </member>
+        <member name="M:re.re.reMatches_opt_time(re.re.wrap@,System.String,System.String,System.Text.RegularExpressions.RegexOptions,System.TimeSpan)">
+            <summary>
+            
+            </summary>
+            <param name="matchesOut"></param>
+            <param name="input"></param>
+            <param name="pattern"></param>
+            <param name="options"></param>
+            <param name="timeSpan"></param>
+        </member>
+        <member name="M:re.re.reMatches_opt_timeT(re.re.wrap@,System.String,System.String,System.Text.RegularExpressions.RegexOptions,System.TimeSpan)">
+            <summary>
+            
+            </summary>
+            <param name="matchesOut"></param>
+            <param name="input"></param>
+            <param name="pattern"></param>
+            <param name="options"></param>
+            <param name="timeSpan"></param>
+        </member>
+        <member name="M:re.re.reMatches_opt_timeA(re.re.wrap@,System.String,System.String,System.Text.RegularExpressions.RegexOptions,System.TimeSpan)">
+            <summary>
+            
+            </summary>
+            <param name="matchesOut"></param>
+            <param name="input"></param>
+            <param name="pattern"></param>
+            <param name="options"></param>
+            <param name="timeSpan"></param>
+        </member>
+        <member name="M:re.re.matchesFor(re.re.wrap,re.re.matchesForCb)">
+            <summary>
+            
+            </summary>
+            <param name="wMatches"></param>
+            <param name="cb"></param>
+        </member>
+        <member name="M:re.re.matchesFree(re.re.wrap)">
+            <summary>
+            
+            </summary>
+            <param name="w"></param>
+        </member>
+        <member name="M:re.re.reFinalize(System.Object)">
+            <summary>
+            Finalize (free) regex object.
+            </summary>
+            <param name="re">Object</param>
+        </member>
+        <member name="M:re.re.Arr1Free(System.IntPtr)">
+            <summary>
+            Free 1 dim array
+            </summary>
+            <param name="addr"></param>
+        </member>
+        <member name="M:re.re.Arr2Free(System.IntPtr)">
+            <summary>
+            Free 2 dim array
+            </summary>
+            <param name="addr"></param>
+        </member>
+        <member name="M:re.re.Arr3Free(System.IntPtr)">
+            <summary>
+            Free 3 dim array
+            </summary>
+            <param name="addr"></param>
+        </member>
+        <member name="M:re.re.GroupNamesFree(re.re.wrap)">
+            <summary>
+            Free GroupNames wrapper object
+            </summary>
+            <param name="wGroupNames"></param>
+        </member>
+        <member name="M:re.re.GroupNumbersFree(re.re.wrap)">
+            <summary>
+            Free GroupNames wrapper object
+            </summary>
+            <param name="wGroupNumbers"></param>
+        </member>
+        <member name="M:re.re.newRegex(System.String)">
+            <summary>
+            Create new regex object
+            </summary>
+            <param name="pattern">UTF16 string</param>
+            <returns>Regex object</returns>
+        </member>
+        <member name="M:re.re.newRegexT(System.String)">
+            <summary>
+            Create new regex object
+            </summary>
+            <param name="pattern">Platform dependent string</param>
+            <returns>Regex object</returns>
+        </member>
+        <member name="M:re.re.newRegexA(System.String)">
+            <summary>
+            Create new regex object
+            </summary>
+            <param name="pattern">ANSI string</param>
+            <returns>Regex object</returns>
+        </member>
+        <member name="M:re.re.regex_opt(System.String,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            Create new regex object
+            </summary>
+            <param name="pattern">UTF16 string</param>
+            <param name="o">RegexOptions</param>
+            <returns>Regex object</returns>
+        </member>
+        <member name="M:re.re.regexT_opt(System.String,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            Create new regex object
+            </summary>
+            <param name="pattern">Platform depended string</param>
+            <param name="o">RegexOptions</param>
+            <returns>Regex object</returns>
+        </member>
+        <member name="M:re.re.regex_optA(System.String,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            Create new regex object
+            </summary>
+            <param name="pattern">ANSI string</param>
+            <param name="o"></param>
+            <returns>Regex object</returns>
+        </member>
+        <member name="M:re.re.regex_opt_time(System.String,System.Text.RegularExpressions.RegexOptions,System.TimeSpan)">
+            <summary>
+            Create new regex object
+            </summary>
+            <param name="pattern">UTF16 string</param>
+            <param name="options">RegexOptions</param>
+            <param name="timeSpan">TimeSpan</param>
+            <returns>Regex object</returns>
+        </member>
+        <member name="M:re.re.regex_opt_timeT(System.String,System.Text.RegularExpressions.RegexOptions,System.TimeSpan)">
+            <summary>
+            Create new regex object
+            </summary>
+            <param name="pattern">Platform depended string</param>
+            <param name="options">RegexOptions</param>
+            <param name="timeSpan">TimeSpan</param>
+            <returns>Regex object</returns>
+        </member>
+        <member name="M:re.re.regex_opt_timeA(System.String,System.Text.RegularExpressions.RegexOptions,System.TimeSpan)">
+            <summary>
+            Create new regex object
+            </summary>
+            <param name="pattern">ANSI string</param>
+            <param name="options">RegexOptions</param>
+            <param name="timeSpan">TimeSpan</param>
+            <returns>Regex object</returns>
+        </member>
+        <member name="M:re.re.regexMatchTimeout(System.Text.RegularExpressions.Regex)">
+            <summary>
+            Gets the time-out interval of the current instance.
+            </summary>
+            <param name="re">Regex object</param>
+            <returns>TimeSpan</returns>
+        </member>
+        <member name="M:re.re.regexOptions(System.Text.RegularExpressions.Regex)">
+            <summary>
+            Gets the options that were passed into the Regex constructor.
+            </summary>
+            <param name="re">Regex object</param>
+            <returns>RegexOptions</returns>
+        </member>
+        <member name="M:re.re.regexRightToLeft(System.Text.RegularExpressions.Regex)">
+            <summary>
+            Gets a value that indicates whether the regular expression searches from right to left.
+            </summary>
+            <param name="re">Regex object</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:re.re.regexGetGroupNames(re.re.wrap@,System.Text.RegularExpressions.Regex)">
+            <summary>
+            Returns an array of capturing group names for the regular expression.
+            </summary>
+            <param name="wGroupNamesOut">Variable for result</param>
+            <param name="re">Regex object</param>
+        </member>
+        <member name="M:re.re.GroupNamesFor(re.re.wrap,re.re.GroupNamesForCb)">
+            <summary>
+            GroupNames loop
+            </summary>
+            <param name="wGroupNames">GroupNames object wrapper</param>
+            <param name="cb">Callback function cb(UTF16 string)</param>
+        </member>
+        <member name="M:re.re.GroupNamesForU(re.re.wrap,re.re.GroupNamesForCbPtr)">
+            <summary>
+            GroupNames loop with string allocation
+            </summary>
+            <param name="wGroupNames">GroupNames object wrapper</param>
+            <param name="cb">Callback function cb(UTF16 string)</param>
+        </member>
+        <member name="M:re.re.GroupNamesForT(re.re.wrap,re.re.GroupNamesForCbPtr)">
+            <summary>
+            GroupNames loop with string allocation
+            </summary>
+            <param name="wGroupNames">GroupNames object wrapper</param>
+            <param name="cb">Callback function cb(Platform string)</param>
+        </member>
+        <member name="M:re.re.GroupNamesForA(re.re.wrap,re.re.GroupNamesForCbPtr)">
+            <summary>
+            GroupNames loop with string allocation
+            </summary>
+            <param name="wGroupNames">GroupNames object wrapper</param>
+            <param name="cb">Callback function cb(ANSI string)</param>
+        </member>
+        <member name="M:re.re.GroupNamesToArrU(System.IntPtr@,re.re.wrap)">
+            <summary>
+            Create line array of items
+            </summary>
+            <param name="arr">Variable for array</param>
+            <param name="wGroupNames">GroupNames object wrapper</param>
+        </member>
+        <member name="M:re.re.GroupNamesToArrT(System.IntPtr@,re.re.wrap)">
+            <summary>
+            Create line array of items
+            </summary>
+            <param name="arr">Variable for array</param>
+            <param name="wGroupNames">GroupNames object wrapper</param>
+        </member>
+        <member name="M:re.re.GroupNamesToArrA(System.IntPtr@,re.re.wrap)">
+            <summary>
+            Create line array of items
+            </summary>
+            <param name="arr">Variable for array</param>
+            <param name="wGroupNames">GroupNames object wrapper</param>
+        </member>
+        <member name="M:re.re.regexGetGroupNumbers(re.re.wrap@,System.Text.RegularExpressions.Regex)">
+            <summary>
+            Returns an array of capturing group numbers that correspond to group names in an array.
+            </summary>
+            <param name="wGroupNumbersOut">Variable for GroupNumbers object</param>
+            <param name="re">Regex object</param>
+        </member>
+        <member name="M:re.re.GroupNumbersFor(re.re.wrap,re.re.GroupNumbersForCb)">
+            <summary>
+            GroupNumbers loop 
+            </summary>
+            <param name="wGroupNumbers">GroupNumbers object wrapper</param>
+            <param name="cb">Callback function cb(int number)</param>
+        </member>
+        <member name="M:re.re.GroupNumbersToArr(System.IntPtr@,re.re.wrap)">
+            <summary>
+            Create line array of items
+            </summary>
+            <param name="arr">Variable for array</param>
+            <param name="wGroupNumbers">GroupNumbers object wrapper</param>
+        </member>
+        <member name="M:re.re.reIsMatch(System.Text.RegularExpressions.Regex,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="re"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.reIsMatchT(System.Text.RegularExpressions.Regex,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="re"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.reIsMatchA(System.Text.RegularExpressions.Regex,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="re"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.reIsMatch_str_int(System.Text.RegularExpressions.Regex,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="re"></param>
+            <param name="input"></param>
+            <param name="startat"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.reIsMatch_str_intT(System.Text.RegularExpressions.Regex,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="re"></param>
+            <param name="input"></param>
+            <param name="startat"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.reIsMatch_str_intA(System.Text.RegularExpressions.Regex,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="re"></param>
+            <param name="input"></param>
+            <param name="startat"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.regexIsMatch(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <param name="pattern"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.regexIsMatchT(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <param name="pattern"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.regexIsMatchA(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <param name="pattern"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.regexIsMatchOpt(System.String,System.String,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <param name="pattern"></param>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.regexIsMatchOptT(System.String,System.String,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <param name="pattern"></param>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.regexIsMatchOptA(System.String,System.String,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <param name="pattern"></param>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.regexIsMatch_opt_time(System.String,System.String,System.Text.RegularExpressions.RegexOptions,System.TimeSpan)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <param name="pattern"></param>
+            <param name="options"></param>
+            <param name="timeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.regexIsMatch_opt_timeT(System.String,System.String,System.Text.RegularExpressions.RegexOptions,System.TimeSpan)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <param name="pattern"></param>
+            <param name="options"></param>
+            <param name="timeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.regexIsMatch_opt_timeA(System.String,System.String,System.Text.RegularExpressions.RegexOptions,System.TimeSpan)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <param name="pattern"></param>
+            <param name="options"></param>
+            <param name="timeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.reMatch(re.re.wrap@,System.Text.RegularExpressions.Regex,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="ret"></param>
+            <param name="re"></param>
+            <param name="input"></param>
+        </member>
+        <member name="M:re.re.reMatchT(re.re.wrap@,System.Text.RegularExpressions.Regex,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="ret"></param>
+            <param name="re"></param>
+            <param name="input"></param>
+        </member>
+        <member name="M:re.re.reMatchA(re.re.wrap@,System.Text.RegularExpressions.Regex,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="ret"></param>
+            <param name="re"></param>
+            <param name="input"></param>
+        </member>
+        <member name="M:re.re.reMatch_int(re.re.wrap@,System.Text.RegularExpressions.Regex,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="ret"></param>
+            <param name="re"></param>
+            <param name="input"></param>
+            <param name="startat"></param>
+        </member>
+        <member name="M:re.re.reMatch_intT(re.re.wrap@,System.Text.RegularExpressions.Regex,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="ret"></param>
+            <param name="re"></param>
+            <param name="input"></param>
+            <param name="startat"></param>
+        </member>
+        <member name="M:re.re.reMatch_intA(re.re.wrap@,System.Text.RegularExpressions.Regex,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="ret"></param>
+            <param name="re"></param>
+            <param name="input"></param>
+            <param name="startat"></param>
+        </member>
+        <member name="M:re.re.reMatch_int_int(re.re.wrap@,System.Text.RegularExpressions.Regex,System.String,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="ret"></param>
+            <param name="re"></param>
+            <param name="input"></param>
+            <param name="startat"></param>
+            <param name="len"></param>
+        </member>
+        <member name="M:re.re.reMatch_int_intT(re.re.wrap@,System.Text.RegularExpressions.Regex,System.String,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="ret"></param>
+            <param name="re"></param>
+            <param name="input"></param>
+            <param name="startat"></param>
+            <param name="len"></param>
+        </member>
+        <member name="M:re.re.reMatch_int_intA(re.re.wrap@,System.Text.RegularExpressions.Regex,System.String,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="ret"></param>
+            <param name="re"></param>
+            <param name="input"></param>
+            <param name="startat"></param>
+            <param name="len"></param>
+        </member>
+        <member name="M:re.re.regexMatch(re.re.wrap@,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="ret"></param>
+            <param name="input"></param>
+            <param name="pattern"></param>
+        </member>
+        <member name="M:re.re.regexMatchT(re.re.wrap@,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="ret"></param>
+            <param name="input"></param>
+            <param name="pattern"></param>
+        </member>
+        <member name="M:re.re.regexMatchA(re.re.wrap@,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="ret"></param>
+            <param name="input"></param>
+            <param name="pattern"></param>
+        </member>
+        <member name="M:re.re.regexMatch_opt(re.re.wrap@,System.String,System.String,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            
+            </summary>
+            <param name="ret"></param>
+            <param name="input"></param>
+            <param name="pattern"></param>
+            <param name="options"></param>
+        </member>
+        <member name="M:re.re.regexMatch_optT(re.re.wrap@,System.String,System.String,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            
+            </summary>
+            <param name="ret"></param>
+            <param name="input"></param>
+            <param name="pattern"></param>
+            <param name="options"></param>
+        </member>
+        <member name="M:re.re.regexMatch_optA(re.re.wrap@,System.String,System.String,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            
+            </summary>
+            <param name="ret"></param>
+            <param name="input"></param>
+            <param name="pattern"></param>
+            <param name="options"></param>
+        </member>
+        <member name="M:re.re.regexMatch_opt_time(re.re.wrap@,System.String,System.String,System.Text.RegularExpressions.RegexOptions,System.TimeSpan)">
+            <summary>
+            
+            </summary>
+            <param name="ret"></param>
+            <param name="input"></param>
+            <param name="pattern"></param>
+            <param name="options"></param>
+            <param name="timeSpan"></param>
+        </member>
+        <member name="M:re.re.regexMatch_opt_timeT(re.re.wrap@,System.String,System.String,System.Text.RegularExpressions.RegexOptions,System.TimeSpan)">
+            <summary>
+            
+            </summary>
+            <param name="ret"></param>
+            <param name="input"></param>
+            <param name="pattern"></param>
+            <param name="options"></param>
+            <param name="timeSpan"></param>
+        </member>
+        <member name="M:re.re.regexMatch_opt_timeA(re.re.wrap@,System.String,System.String,System.Text.RegularExpressions.RegexOptions,System.TimeSpan)">
+            <summary>
+            
+            </summary>
+            <param name="ret"></param>
+            <param name="input"></param>
+            <param name="pattern"></param>
+            <param name="options"></param>
+            <param name="timeSpan"></param>
+        </member>
+        <member name="M:re.re.matchNext(re.re.wrap)">
+            <summary>
+            
+            </summary>
+            <param name="w"></param>
+        </member>
+        <member name="M:re.re.matchGroups(re.re.wrap@,re.re.wrap)">
+            <summary>
+            
+            </summary>
+            <param name="wGroups"></param>
+            <param name="wMatch"></param>
+        </member>
+        <member name="M:re.re.matchSuccess(re.re.wrap)">
+            <summary>
+            
+            </summary>
+            <param name="w"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.matchIndex(re.re.wrap)">
+            <summary>
+            
+            </summary>
+            <param name="w"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.matchValue(re.re.wrap)">
+            <summary>
+            
+            </summary>
+            <param name="w"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.matchValueU(re.re.wrap)">
+            <summary>
+            
+            </summary>
+            <param name="w"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.matchValueT(re.re.wrap)">
+            <summary>
+            
+            </summary>
+            <param name="w"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.matchValueA(re.re.wrap)">
+            <summary>
+            
+            </summary>
+            <param name="w"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.groupCaptures(re.re.wrap@,re.re.wrap)">
+            <summary>
+            
+            </summary>
+            <param name="wCaptures"></param>
+            <param name="wGroup"></param>
+        </member>
+        <member name="M:re.re.groupIndex(re.re.wrap)">
+            <summary>
+            
+            </summary>
+            <param name="wGroup"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.groupLength(re.re.wrap)">
+            <summary>
+            
+            </summary>
+            <param name="wGroup"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.groupSuccess(re.re.wrap)">
+            <summary>
+            
+            </summary>
+            <param name="wGroup"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.groupValue(re.re.wrap)">
+            <summary>
+            
+            </summary>
+            <param name="wGroup"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.groupValueU(re.re.wrap)">
+            <summary>
+            
+            </summary>
+            <param name="wGroup"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.groupValueT(re.re.wrap)">
+            <summary>
+            
+            </summary>
+            <param name="wGroup"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.groupValueA(re.re.wrap)">
+            <summary>
+            
+            </summary>
+            <param name="wGroup"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.captureIndex(re.re.wrap)">
+            <summary>
+            
+            </summary>
+            <param name="wCapture"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.captureLength(re.re.wrap)">
+            <summary>
+            
+            </summary>
+            <param name="wCapture"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.captureValue(re.re.wrap)">
+            <summary>
+            
+            </summary>
+            <param name="wCapture"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.captureValueU(re.re.wrap)">
+            <summary>
+            
+            </summary>
+            <param name="wCapture"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.captureValueT(re.re.wrap)">
+            <summary>
+            
+            </summary>
+            <param name="wCapture"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.captureValueA(re.re.wrap)">
+            <summary>
+            
+            </summary>
+            <param name="wCapture"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.matchGroupsPos(System.IntPtr@,re.re.wrap)">
+            <summary>
+            
+            </summary>
+            <param name="groupsOut"></param>
+            <param name="w"></param>
+        </member>
+        <member name="M:re.re.matchGroupsStr(System.IntPtr@,re.re.wrap)">
+            <summary>
+            
+            </summary>
+            <param name="groupsOut"></param>
+            <param name="w"></param>
+        </member>
+        <member name="M:re.re.matchGroupsStrT(System.IntPtr@,re.re.wrap)">
+            <summary>
+            
+            </summary>
+            <param name="groupsOut"></param>
+            <param name="w"></param>
+        </member>
+        <member name="M:re.re.matchGroupsStrA(System.IntPtr@,re.re.wrap)">
+            <summary>
+            
+            </summary>
+            <param name="groupsOut"></param>
+            <param name="w"></param>
+        </member>
+        <member name="M:re.re.matchGroupsFor(re.re.wrap,re.re.groupForCb)">
+            <summary>
+            
+            </summary>
+            <param name="w"></param>
+            <param name="cb"></param>
+        </member>
+        <member name="M:re.re.groupCapturesFor(re.re.wrap,re.re.captureForCb)">
+            <summary>
+            
+            </summary>
+            <param name="wrapGroup"></param>
+            <param name="cb"></param>
+        </member>
+        <member name="M:re.re.matchValueFree(System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:re.re.matchFree(re.re.wrap)">
+            <summary>
+            
+            </summary>
+            <param name="w"></param>
+        </member>
+        <member name="M:re.re.groupFree(re.re.wrap)">
+            <summary>
+            
+            </summary>
+            <param name="w"></param>
+        </member>
+        <member name="M:re.re.captureFree(re.re.wrap)">
+            <summary>
+            
+            </summary>
+            <param name="w"></param>
+        </member>
+        <member name="M:re.re.groupsPosFree(System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="addr"></param>
+        </member>
+        <member name="M:re.re.groupsStrFree(System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="addr"></param>
+        </member>
+        <member name="M:re.re.RegexReplaceCb(System.Text.RegularExpressions.Regex,System.String,re.re.reReplaceCb)">
+            <summary>
+            
+            </summary>
+            <param name="re"></param>
+            <param name="input"></param>
+            <param name="cb"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.RegexReplaceCbT(System.Text.RegularExpressions.Regex,System.String,re.re.reReplaceCb)">
+            <summary>
+            
+            </summary>
+            <param name="re"></param>
+            <param name="input"></param>
+            <param name="cb"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.RegexReplaceCbA(System.Text.RegularExpressions.Regex,System.String,re.re.reReplaceCb)">
+            <summary>
+            
+            </summary>
+            <param name="re"></param>
+            <param name="input"></param>
+            <param name="cb"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.RegexReplace_cb_count(System.Text.RegularExpressions.Regex,System.String,re.re.reReplaceCb,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="re"></param>
+            <param name="input"></param>
+            <param name="cb"></param>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.RegexReplace_cb_countT(System.Text.RegularExpressions.Regex,System.String,re.re.reReplaceCb,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="re"></param>
+            <param name="input"></param>
+            <param name="cb"></param>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.RegexReplace_cb_countA(System.Text.RegularExpressions.Regex,System.String,re.re.reReplaceCb,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="re"></param>
+            <param name="input"></param>
+            <param name="cb"></param>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.RegexReplace(System.Text.RegularExpressions.Regex,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="re"></param>
+            <param name="input"></param>
+            <param name="replacement"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.RegexReplaceT(System.Text.RegularExpressions.Regex,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="re"></param>
+            <param name="input"></param>
+            <param name="replacement"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.RegexReplaceA(System.Text.RegularExpressions.Regex,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="re"></param>
+            <param name="input"></param>
+            <param name="replacement"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.RegexReplace_count(System.Text.RegularExpressions.Regex,System.String,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="re"></param>
+            <param name="input"></param>
+            <param name="replacement"></param>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.RegexReplace_countT(System.Text.RegularExpressions.Regex,System.String,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="re"></param>
+            <param name="input"></param>
+            <param name="replacement"></param>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.RegexReplace_countA(System.Text.RegularExpressions.Regex,System.String,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="re"></param>
+            <param name="input"></param>
+            <param name="replacement"></param>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.RegexReplace_count_startat(System.Text.RegularExpressions.Regex,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="re"></param>
+            <param name="input"></param>
+            <param name="replacement"></param>
+            <param name="count"></param>
+            <param name="startat"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.RegexReplace_count_startatT(System.Text.RegularExpressions.Regex,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="re"></param>
+            <param name="input"></param>
+            <param name="replacement"></param>
+            <param name="count"></param>
+            <param name="startat"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.RegexReplace_count_startatA(System.Text.RegularExpressions.Regex,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="re"></param>
+            <param name="input"></param>
+            <param name="replacement"></param>
+            <param name="count"></param>
+            <param name="startat"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.reReplace_cb(System.String,System.String,re.re.reReplaceCb)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <param name="replacement"></param>
+            <param name="cb"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.reReplace_cbT(System.String,System.String,re.re.reReplaceCb)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <param name="replacement"></param>
+            <param name="cb"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.reReplace_cbA(System.String,System.String,re.re.reReplaceCb)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <param name="replacement"></param>
+            <param name="cb"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.reReplace_cb_opt(System.String,System.String,re.re.reReplaceCb,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <param name="replacement"></param>
+            <param name="cb"></param>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.reReplace_cb_optT(System.String,System.String,re.re.reReplaceCb,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <param name="replacement"></param>
+            <param name="cb"></param>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.reReplace_cb_optA(System.String,System.String,re.re.reReplaceCb,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <param name="replacement"></param>
+            <param name="cb"></param>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.reReplace_cb_opt_time(System.String,System.String,re.re.reReplaceCb,System.Text.RegularExpressions.RegexOptions,System.TimeSpan)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <param name="replacement"></param>
+            <param name="cb"></param>
+            <param name="options"></param>
+            <param name="timeSpan"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.reReplace_cb_opt_timeT(System.String,System.String,re.re.reReplaceCb,System.Text.RegularExpressions.RegexOptions,System.TimeSpan)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <param name="replacement"></param>
+            <param name="cb"></param>
+            <param name="options"></param>
+            <param name="timeSpan"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.reReplace_cb_opt_timeA(System.String,System.String,re.re.reReplaceCb,System.Text.RegularExpressions.RegexOptions,System.TimeSpan)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <param name="replacement"></param>
+            <param name="cb"></param>
+            <param name="options"></param>
+            <param name="timeSpan"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.reReplace(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <param name="pattern"></param>
+            <param name="replacement"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.reReplaceT(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <param name="pattern"></param>
+            <param name="replacement"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.reReplaceA(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <param name="pattern"></param>
+            <param name="replacement"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.reReplace_opt(System.String,System.String,System.String,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <param name="pattern"></param>
+            <param name="replacement"></param>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.reReplace_optT(System.String,System.String,System.String,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <param name="pattern"></param>
+            <param name="replacement"></param>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.reReplace_optA(System.String,System.String,System.String,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <param name="pattern"></param>
+            <param name="replacement"></param>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.reReplace_opt_time(System.String,System.String,System.String,System.Text.RegularExpressions.RegexOptions,System.TimeSpan)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <param name="pattern"></param>
+            <param name="replacement"></param>
+            <param name="options"></param>
+            <param name="timeSpan"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.reReplace_opt_timeT(System.String,System.String,System.String,System.Text.RegularExpressions.RegexOptions,System.TimeSpan)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <param name="pattern"></param>
+            <param name="replacement"></param>
+            <param name="options"></param>
+            <param name="timeSpan"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.reReplace_opt_timeA(System.String,System.String,System.String,System.Text.RegularExpressions.RegexOptions,System.TimeSpan)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <param name="pattern"></param>
+            <param name="replacement"></param>
+            <param name="options"></param>
+            <param name="timeSpan"></param>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.RegexSplit(re.re.wrap@,System.Text.RegularExpressions.Regex,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="splitOut"></param>
+            <param name="re"></param>
+            <param name="input"></param>
+        </member>
+        <member name="M:re.re.RegexSplitT(re.re.wrap@,System.Text.RegularExpressions.Regex,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="splitOut"></param>
+            <param name="re"></param>
+            <param name="input"></param>
+        </member>
+        <member name="M:re.re.RegexSplitA(re.re.wrap@,System.Text.RegularExpressions.Regex,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="splitOut"></param>
+            <param name="re"></param>
+            <param name="input"></param>
+        </member>
+        <member name="M:re.re.RegexSplit_count(re.re.wrap@,System.Text.RegularExpressions.Regex,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="splitOut"></param>
+            <param name="re"></param>
+            <param name="input"></param>
+            <param name="count"></param>
+        </member>
+        <member name="M:re.re.RegexSplit_countT(re.re.wrap@,System.Text.RegularExpressions.Regex,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="splitOut"></param>
+            <param name="re"></param>
+            <param name="input"></param>
+            <param name="count"></param>
+        </member>
+        <member name="M:re.re.RegexSplit_countA(re.re.wrap@,System.Text.RegularExpressions.Regex,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="splitOut"></param>
+            <param name="re"></param>
+            <param name="input"></param>
+            <param name="count"></param>
+        </member>
+        <member name="M:re.re.RegexSplit_count_startat(re.re.wrap@,System.Text.RegularExpressions.Regex,System.String,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="splitOut"></param>
+            <param name="re"></param>
+            <param name="input"></param>
+            <param name="count"></param>
+            <param name="startat"></param>
+        </member>
+        <member name="M:re.re.RegexSplit_count_startatT(re.re.wrap@,System.Text.RegularExpressions.Regex,System.String,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="splitOut"></param>
+            <param name="re"></param>
+            <param name="input"></param>
+            <param name="count"></param>
+            <param name="startat"></param>
+        </member>
+        <member name="M:re.re.RegexSplit_count_startatA(re.re.wrap@,System.Text.RegularExpressions.Regex,System.String,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="splitOut"></param>
+            <param name="re"></param>
+            <param name="input"></param>
+            <param name="count"></param>
+            <param name="startat"></param>
+        </member>
+        <member name="M:re.re.reSplit(re.re.wrap@,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="splitOut"></param>
+            <param name="input"></param>
+            <param name="pattern"></param>
+        </member>
+        <member name="M:re.re.reSplitT(re.re.wrap@,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="splitOut"></param>
+            <param name="input"></param>
+            <param name="pattern"></param>
+        </member>
+        <member name="M:re.re.reSplitA(re.re.wrap@,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="splitOut"></param>
+            <param name="input"></param>
+            <param name="pattern"></param>
+        </member>
+        <member name="M:re.re.reSplit_opt(re.re.wrap@,System.String,System.String,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            
+            </summary>
+            <param name="splitOut"></param>
+            <param name="input"></param>
+            <param name="pattern"></param>
+            <param name="options"></param>
+        </member>
+        <member name="M:re.re.reSplit_optT(re.re.wrap@,System.String,System.String,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            
+            </summary>
+            <param name="splitOut"></param>
+            <param name="input"></param>
+            <param name="pattern"></param>
+            <param name="options"></param>
+        </member>
+        <member name="M:re.re.reSplit_optA(re.re.wrap@,System.String,System.String,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            
+            </summary>
+            <param name="splitOut"></param>
+            <param name="input"></param>
+            <param name="pattern"></param>
+            <param name="options"></param>
+        </member>
+        <member name="M:re.re.reSplit_opt_time(re.re.wrap@,System.String,System.String,System.Text.RegularExpressions.RegexOptions,System.TimeSpan)">
+            <summary>
+            
+            </summary>
+            <param name="splitOut"></param>
+            <param name="input"></param>
+            <param name="pattern"></param>
+            <param name="options"></param>
+            <param name="timeSpan"></param>
+        </member>
+        <member name="M:re.re.reSplit_opt_timeT(re.re.wrap@,System.String,System.String,System.Text.RegularExpressions.RegexOptions,System.TimeSpan)">
+            <summary>
+            
+            </summary>
+            <param name="splitOut"></param>
+            <param name="input"></param>
+            <param name="pattern"></param>
+            <param name="options"></param>
+            <param name="timeSpan"></param>
+        </member>
+        <member name="M:re.re.reSplit_opt_timeA(re.re.wrap@,System.String,System.String,System.Text.RegularExpressions.RegexOptions,System.TimeSpan)">
+            <summary>
+            
+            </summary>
+            <param name="splitOut"></param>
+            <param name="input"></param>
+            <param name="pattern"></param>
+            <param name="options"></param>
+            <param name="timeSpan"></param>
+        </member>
+        <member name="M:re.re.SplitFor(re.re.wrap,re.re.SplitForCb)">
+            <summary>
+            
+            </summary>
+            <param name="wSplit"></param>
+            <param name="cb"></param>
+        </member>
+        <member name="M:re.re.SplitForU(re.re.wrap,re.re.SplitForCbPtr)">
+            <summary>
+            
+            </summary>
+            <param name="wSplit"></param>
+            <param name="cb"></param>
+        </member>
+        <member name="M:re.re.SplitForT(re.re.wrap,re.re.SplitForCbPtr)">
+            <summary>
+            
+            </summary>
+            <param name="wSplit"></param>
+            <param name="cb"></param>
+        </member>
+        <member name="M:re.re.SplitForA(re.re.wrap,re.re.SplitForCbPtr)">
+            <summary>
+            
+            </summary>
+            <param name="wSplit"></param>
+            <param name="cb"></param>
+        </member>
+        <member name="M:re.re.SplitToArrU(System.IntPtr@,re.re.wrap)">
+            <summary>
+            
+            </summary>
+            <param name="arr"></param>
+            <param name="wSplit"></param>
+        </member>
+        <member name="M:re.re.SplitToArrT(System.IntPtr@,re.re.wrap)">
+            <summary>
+            
+            </summary>
+            <param name="arr"></param>
+            <param name="wSplit"></param>
+        </member>
+        <member name="M:re.re.SplitToArrA(System.IntPtr@,re.re.wrap)">
+            <summary>
+            
+            </summary>
+            <param name="arr"></param>
+            <param name="wSplit"></param>
+        </member>
+        <member name="M:re.re.SplitFree(re.re.wrap)">
+            <summary>
+            
+            </summary>
+            <param name="wSplit"></param>
+        </member>
+        <member name="T:re.re.matchesForCb">
+            <summary>
+            
+            </summary>
+            <param name="wMatch"></param>
+        </member>
+        <member name="T:re.re.GroupNamesForCb">
+            <summary>
+            GroupNames loop delegate
+            </summary>
+            <param name="result"></param>
+        </member>
+        <member name="T:re.re.GroupNamesForCbPtr">
+            <summary>
+            GroupNames loop delegate for allocated string
+            </summary>
+            <param name="str"></param>
+        </member>
+        <member name="T:re.re.GroupNumbersForCb">
+            <summary>
+            GroupNumbers loop delegate
+            </summary>
+            <param name="number"></param>
+        </member>
+        <member name="T:re.re.groupForCb">
+            <summary>
+            
+            </summary>
+            <param name="wrapGroup"></param>
+        </member>
+        <member name="T:re.re.captureForCb">
+            <summary>
+            
+            </summary>
+            <param name="wrapCapture"></param>
+        </member>
+        <member name="T:re.re.reReplaceCb">
+            <summary>
+            
+            </summary>
+            <param name="wMatch"></param>
+            <returns></returns>
+        </member>
+        <member name="T:re.re.SplitForCb">
+            <summary>
+            
+            </summary>
+            <param name="result"></param>
+        </member>
+        <member name="T:re.re.SplitForCbPtr">
+            <summary>
+            
+            </summary>
+            <param name="str"></param>
+        </member>
+        <member name="T:re.re.wrap">
+            <summary>
+            Wraper for objects
+            </summary>
+        </member>
+        <member name="F:re.re.wrap.o">
+            <summary>
+            Object for wrapping
+            </summary>
+        </member>
+        <member name="T:re.re.Arr1">
+            <summary>
+            Line unmanaged Array, [ count, item1, ..., itemN ]
+            </summary>
+        </member>
+        <member name="F:re.re.Arr1.addr">
+            <summary>
+            Address of array
+            </summary>
+        </member>
+        <member name="M:re.re.Arr1.len">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.Arr1.bytes">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.Arr1.#ctor(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="l"></param>
+        </member>
+        <member name="M:re.re.Arr1.push(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="val"></param>
+        </member>
+        <member name="M:re.re.Arr1.push(System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="val"></param>
+        </member>
+        <member name="M:re.re.Arr1.free">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:re.re.Arr1.free(System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="addr"></param>
+        </member>
+        <member name="T:re.re.Arr2">
+            <summary>
+            2 dim unmanaged Array, [ count, Arr1, ..., ArrN ]
+            3 dim unmanaged Array, [ count, Arr1[count, str1, ..., strN], ..., ArrN ]
+            </summary>
+        </member>
+        <member name="F:re.re.Arr2.addr">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:re.re.Arr2.len">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.Arr2.bytes">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.Arr2.#ctor(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="l"></param>
+        </member>
+        <member name="M:re.re.Arr2.add(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="l"></param>
+        </member>
+        <member name="M:re.re.Arr2.next">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:re.re.Arr2.item">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.Arr2.itemLen">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:re.re.Arr2.push(System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="val"></param>
+        </member>
+        <member name="M:re.re.Arr2.push(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="val"></param>
+        </member>
+        <member name="M:re.re.Arr2.free">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:re.re.Arr2.free(System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="addr"></param>
+        </member>
+        <member name="M:re.re.Arr2.itemsFree(System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="addr"></param>
+        </member>
+    </members>
+</doc>
