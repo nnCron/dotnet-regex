@@ -16,15 +16,15 @@ dotnet regex plugin for nnCron
 * [Debug](re/doc/Debug.md)
 * [Release](re/doc/Debug.md)
 
+Doc xml2md generator:  https://gist.github.com/VoidVolker/d195b9746fcc6907a551
+
 ### Regex class
 
 https://msdn.microsoft.com/en-us/library/system.text.regularexpressions.regex(v=vs.110).aspx
 
-Doc xml2md generator:  https://gist.github.com/VoidVolker/d195b9746fcc6907a551
-
 ### Plugin
 
-<In develop>
+(In develop)
 
 ---
 
@@ -50,5 +50,5 @@ https://msdn.microsoft.com/ru-ru/library/system.text.regularexpressions.regex(v=
 
 ### Плагин
 
-<В разработке>
+(В разработке)
 
