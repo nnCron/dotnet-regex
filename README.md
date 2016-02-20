@@ -11,6 +11,6 @@ dotnet regex plugin for nnCron
 
 ## Установка
 
-* Копирвоать `re\re\bin\Release\re.dll` в домашний каталог nnCron
-* Копирвоать `re.spf` в каталог `nnCron\plugins`
+* Копировать `re\re\bin\Release\re.dll` в домашний каталог nnCron
+* Копировать `re.spf` в каталог `nnCron\plugins`
 * Добавить `re.spf` в список плагинов в `nnCron.ini` или через GUI
