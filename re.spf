@@ -17,6 +17,7 @@ MODULE: RE_MODULE
     WINAPI: InfiniteMatchTimeout re.dll
 
 EXPORT
+    WARNING @ WARNING OFF
 
     Options.Compiled                 CONSTANT Options.Compiled
     Options.CultureInvariant         CONSTANT Options.CultureInvariant
@@ -29,6 +30,8 @@ EXPORT
     Options.RightToLeft              CONSTANT Options.RightToLeft
     Options.Singleline               CONSTANT Options.Singleline
     InfiniteMatchTimeout             CONSTANT InfiniteMatchTimeout
+
+    WARNING !
 
     WINAPI: Regex.Matches re.dll
     WINAPI: Regex.MatchesT re.dll
