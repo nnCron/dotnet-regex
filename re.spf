@@ -219,8 +219,19 @@ EXPORT
     WINAPI: Split.Free re.dll
 
     \ ----------------------------------------------------------------------------------------------------
+    : S>UZ   \ ( a u -- a_unicode )
+        S>UNICODE DROP
+    ;
+
+    \ ----------------------------------------------------------------------------------------------------
     \ Regex Options
     0 VALUE reCompilationOptions
+
+    \ 0
+    \ CELL -- -Regex
+    \ CELL -- -ReOptions
+    \ CELL -- -RePattern
+    \ CONSTANT /Regex
 
     : ReDefOptions
         Options.Compiled TO reCompilationOptions
@@ -291,21 +302,25 @@ EXPORT
     \ ----------------------------------------------------------------------------------------------------
     \ Regex creation
 
-    : SREGEX   \ ( a u -- regex )
-        2DROP
-        ReDefOptions
-    ;
 
     : UREGEX   \ ( a_utf u -- regex )
-        ." UREGEX: " TYPE CR
-        \ 2DROP
+        DROP ReDefOptions SWAP Regex_opt
         ReDefOptions
     ;
 
-    \ : REGEX   \ ( regex -- ) ( "name" -> ) /pattern/ REGEX patternNameValue
-    \     VALUE
-    \ ;
+    : REGEX   \ ( a u -- regex )
+        S>UNICODE DROP reCompilationOptions SWAP Regex_opt
+        ReDefOptions
+    ;
 
+    : OPT-REGEX   \ ( a u options -- regex )
+        -ROT
+        S>UNICODE DROP Regex_opt
+    ;
+
+    : OPT-UREGEX   \ ( a u options -- regex )
+        NIP SWAP Regex_opt
+    ;
 
     \ --------------------------------------------------
     \ Regex builder
@@ -322,19 +337,17 @@ EXPORT
     \ S" /pattern/imnsxre" IsRegex?
     \ S" /pattern/"
 
-    : IsRegex?   \ ( a u -- au_regex au_options true | false  )
+    : IsRegex?   \ ( a u -- true | false  )
         DUP 3 <             IF 2DROP FALSE EXIT THEN
         OVER C@ [CHAR] / <> IF 2DROP FALSE EXIT THEN    \ a u
         1 -1 D+
-        S" /" StringSplitBack IF  \ a1 u2 a2 u2
-            TRUE
-        ELSE 2DROP 2DROP THEN
+        S" /" BACK-SEARCH NIP NIP
     ;
 
-    : ParseOptions   \ ( a u -- options )
-        DUP IFNOT NIP EXIT THEN
-        0 -ROT
-        OVER + SWAP DO
+    : ParseOptions   \ ( a u -- a1 u1 options )
+        DUP IFNOT NIP EXIT THEN \ a 0 -> exit
+        OVER SWAP 0 0 2SWAP     \ a 0 0 a u
+        OVER + 1- DO
             I C@ CASE
                 [CHAR] i OF Options.IgnoreCase OR ENDOF
                 [CHAR] m OF Options.Multiline OR ENDOF
@@ -344,15 +357,22 @@ EXPORT
                 [CHAR] r OF Options.RightToLeft OR ENDOF
                 [CHAR] e OF Options.ECMAScript OR ENDOF
                 [CHAR] c OF Options.CultureInvariant OR ENDOF
+                [CHAR] / OF \ a 0 opt
+                    -ROT DROP   \ opt a
+                    I OVER      \ opt a a1 a
+                    -           \ opt a u1
+                    ROT         \ a u1 opt
+                    LEAVE
+                ENDOF
                 DUP OF ABORT" Unknow regex option" ENDOF
             ENDCASE
-        LOOP
+        -1 +LOOP
     ;
 
-    : BuildRegex   \ ( a1 u2 a2 u2 -- regex )
-        ParseOptions
-        reCompilationOptions OR TO reCompilationOptions
-        UREGEX
+    : BuildRegex   \ ( a1 u1 -- regex )
+        1 -1 D+
+        ParseOptions   \ a1 u2 options
+        OPT-REGEX
     ;
 
     WARNING @ WARNING OFF
@@ -361,7 +381,7 @@ EXPORT
       2DUP 2>R ['] NOTFOUND CATCH
       IF
         2DROP
-        2R@ IsRegex? IF BuildRegex ELSE -2003 THROW THEN
+        2R@ IsRegex? IF 2R@ BuildRegex ELSE -2003 THROW THEN
       THEN
       RDROP RDROP
     ;
@@ -372,7 +392,15 @@ EXPORT
     \ IsMatch
 
     : ReIsMatch   \ ( a u regex -- ? )
+        -ROT S>UNICODE DROP SWAP Regex.IsMatch
+    ;
 
+    : ReIsMatchU   \ ( a u regex -- ? )
+        NIP Regex.IsMatch
+    ;
+
+    : ReIsMatchZ   \ ( az regex -- ? )
+        Regex.IsMatch
     ;
 
     \ ----------------------------------------------------------------------------------------------------
